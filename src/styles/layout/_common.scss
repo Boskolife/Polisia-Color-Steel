@@ -1,3 +1,17 @@
+html {
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background-color: $white;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: $orange;
+    }
+}
+
 .container {
     max-width: 1340px;
     width: 100%;
