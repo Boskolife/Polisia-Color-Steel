@@ -101,3 +101,62 @@ new Swiper('.gallery_swiper', {
     },
   },
 });
+
+let swiper;
+
+function initSwiper() {
+  if (window.innerWidth <= 1024 && !swiper) {
+    swiper = new Swiper('.team_gallery', {
+      modules: [Navigation, Pagination, EffectCreative],
+      loop: true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      pagination: {
+        el: '.swiper-pagination',
+      },
+      effect: 'creative',
+      creativeEffect: {
+        prev: {
+          shadow: false,
+          translate: ['-110%', 0, -150],
+        },
+        next: {
+          shadow: false,
+          translate: ['110%', 0, -150],
+        },
+        current: {
+          translate: [0, 0, 0],
+          scale: 1,
+        },
+      },
+      breakpoints: {
+        320: {
+          slidesPerView: 1.2,
+          spaceBetween: 12,
+          centeredSlides: true,
+        },
+        560: {
+          slidesPerView: 1.8,
+          spaceBetween: 12,
+          centeredSlides: true,
+        },
+        768: {
+          slidesPerView: 2.3,
+          spaceBetween: 12,
+          centeredSlides: true,
+        },
+      },
+    });
+  } else if (window.innerWidth > 1024 && swiper) {
+    swiper.destroy(true, true);
+    swiper = null;
+  }
+}
+
+initSwiper();
+
+window.addEventListener('resize', () => {
+  initSwiper();
+});

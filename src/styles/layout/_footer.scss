@@ -1,1 +1,163 @@
-#footer {}
+.footer {
+    background-color: $black;
+    position: relative;
+    overflow: hidden;
+    @include adaptive-value("padding-top", 100, 80, 1);
+    @include adaptive-value("padding-bottom", 40, 50, 1);
+
+    .container {
+        max-width: 1203px;
+        margin: 0 auto 0 0;
+    }
+
+    &_circles {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+
+        @include media ("<tablet") {
+            display: none;
+        }
+    }
+
+    &_content {
+        position: relative;
+        z-index: 2;
+    }
+
+    &_top {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 30px;
+        @include adaptive-value("margin-bottom", 102, 21, 1);
+
+        @include media ("<phone_x") {
+            flex-direction: column
+        }
+    }
+
+    &_logo {
+        @include adaptive-value("width", 185, 120, 1);
+        @include adaptive-value("height", 120, 100, 1);
+
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &_info {
+        max-width: 350px;
+        width: 100%;
+    }
+
+
+    &_menu {
+        @include adaptive-value("margin-bottom", 60, 40, 1);
+        width: 100%;
+
+        ul {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+            width: 100%;
+        }
+
+        li {
+            width: 47%;
+
+            &::before {
+                display: none
+            }
+        }
+
+        a {
+            @include adaptive-value("font-size", 18, 16, 1);
+            color: #F9F8F4;
+            transition: all .3s ease;
+
+            &:hover {
+                color: $orange;
+                transition: all .3s ease;
+            }
+
+        }
+    }
+
+    &_label {
+        color: #8C8C8C;
+        margin-bottom: 12px;
+    }
+
+    &_number {
+        display: inline-block;
+        @include adaptive-value("font-size", 32, 25, 1);
+        @include adaptive-value("letter-spacing", -0.32, -0.25, 1);
+        font-weight: 500;
+        color: $white;
+        margin-bottom: 12px;
+    }
+
+    &_info-item {
+        color: #D2D2D2;
+        margin-bottom: 12px;
+    }
+
+    &_bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 18px 30px;
+
+        .left-col {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 40px 60px;
+        }
+
+        a {
+            @include adaptive-value("font-size", 18, 16, 1);
+
+            &:hover {
+                color: $orange;
+                transition: all .3s ease;
+            }
+        }
+
+        a,
+        p {
+            font-weight: 500;
+            color: #8C8C8C;
+            transition: all .3s ease;
+        }
+    }
+
+    &_socials {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+    }
+
+    .social_link {
+        width: 32px;
+        height: 32px;
+        transition: all .3s ease;
+
+        &:hover {
+            scale: 1.05;
+            transition: all .3s ease;
+        }
+    }
+
+    &_link-wrap {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+    }
+}

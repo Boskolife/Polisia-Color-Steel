@@ -20,26 +20,29 @@ h6,
 
 h1,
 .h1 {
-    font-size: $h1-font-size;
+    @include adaptive-value("font-size", 52, 36, 1);
+    @include adaptive-value("letter-spacing", -1.56, -1.08, 1);
+    line-height: 115%
 }
 
 h2,
 .h2 {
     @include adaptive-value("font-size", 48, 32, 1);
-    @include adaptive-value("letter-spacing", 0.96, 0.64, 1);
+    @include adaptive-value("letter-spacing", -0.96, -0.64, 1);
     line-height: 115%
 }
 
 h3,
 .h3 {
     @include adaptive-value("font-size", 32, 25, 1);
+    @include adaptive-value("letter-spacing", -0.32, -0.25, 1);
     line-height: 120%;
 }
 
 h4,
 .h4 {
     @include adaptive-value("font-size", 26, 22, 1);
-    @include adaptive-value("letter-spacing", 0.26, 0.22, 1);
+    @include adaptive-value("letter-spacing", -0.26, -0.22, 1);
     line-height: 135%;
 }
 

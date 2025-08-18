@@ -1,17 +1,4 @@
-<!doctype html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Polisia Color Steel</title>
-  <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
-  <link rel="manifest" href="./favicon/site.webmanifest">
-  <link rel="stylesheet" href="./styles/main.scss">
-  <script type="module" src="./js/main.js" defer></script>
-</head>
+{{> head }}
 
 <body>
   {{> header }}
@@ -114,6 +101,7 @@
     </section>
     <section class="services default-section">
       <div class="container">
+        <h2 class="services_title">Послуги</h2>
         <div class="services_content">
           <div class="services_card">
             <div class="card_img">
@@ -125,7 +113,7 @@
               <li>Відповідність європейським нормам EN та ISO</li>
               <li>Гарантію стабільності характеристик</li>
             </ul>
-            <a href="#" class="btn btn_gray">Детальніше</a>
+            <a href="imports-of-steel-in-coils.html" class="btn btn_gray">Детальніше</a>
           </div>
           <div class="services_card">
             <div class="card_img">
@@ -138,7 +126,7 @@
               <li>Покриття полімерними фарбами</li>
               <li>Термічне сушіння в печах полімеризації</li>
             </ul>
-            <a href="#" class="btn btn_gray">Детальніше</a>
+            <a href="coil-coating-of-steel.html" class="btn btn_gray">Детальніше</a>
           </div>
           <div class="services_card">
             <div class="card_img">
@@ -150,11 +138,11 @@
               <li>Нанесення полімерних покриттів різних типів</li>
               <li>Підбір кольору за RAL, RR та спецвідтінками</li>
               <li>Нанесення текстур та декоративних принтів</li>
-            </ul>
-            <a href="#" class="btn btn_gray">Детальніше</a>
+            </ul> 
+            <a href="custom-steel-painting.html" class="btn btn_gray">Детальніше</a>
           </div>
         </div>
-        <a href="service.html" class="btn btn_orange">Всі послуги</a>
+        <a href="services.html" class="btn btn_orange">Всі послуги</a>
       </div>
     </section>
     <section class="choose">
@@ -251,7 +239,7 @@
         </div>
       </div>
     </section>
-    <div class="news default-section">
+    <section class="news default-section">
       <div class="container">
         <h2 class="news_title">Новини</h2>
         <div class="news_content">
@@ -301,9 +289,10 @@
             </p>
           </div>
         </div>
+        <a href="news.html" class="btn btn_orange">Всі новини</a>
       </div>
-    </div>
-    <section class="faq">
+    </section>
+    <section class="faq default-section">
       <div class="container">
         <div class="faq_content">
           <h2 class="faq_title">Часті питання</h2>
@@ -388,10 +377,10 @@
             </div>
           </div>
         </div>
-        <a href="#" class="btn btn_orange">Всі новини</a>
       </div>
     </section>
   </main>
+  {{> footer}}
 </body>
 
 </html>
