@@ -1,0 +1,47 @@
+.btn {
+    display: inline-block;
+    padding: 16px 20px;
+    font-size: 16px;
+    font-weight: 700;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    text-align: center;
+    transition: all .3s ease;
+
+    &_white {
+        background-color: $white;
+        border-color: $gray;
+        color: $black;
+
+        &:hover {
+            background-color: $orange;
+            color: $white;
+            transition: all .3s ease;
+        }
+    }
+
+    &_orange {
+        background-color: $orange;
+        border-color: $orange;
+        color: $white;
+
+        &:hover {
+            color: $orange;
+            background-color: $orange_hover;
+            transition: all .3s ease;
+        }
+    }
+
+    &_gray {
+        background-color: $whiteF5;
+        border-color: $gray;
+        color: $black;
+        transition: all .3s ease;
+
+        &:hover {
+            background-color: $orange;
+            color: $white;
+            transition: all .3s ease;
+        }
+    }
+}
