@@ -114,6 +114,10 @@
         @include media ("<widescreen") {
             font-size: 25px;
         }
+
+        &.active {
+            color: $orange;
+        }
     }
 
     &_buttons {

@@ -9,6 +9,7 @@ import {
 import { Accordion } from './components/accordion';
 
 initBurger();
+setActiveMenu();
 
 new Accordion('#faq', '');
 
@@ -160,3 +161,19 @@ initSwiper();
 window.addEventListener('resize', () => {
   initSwiper();
 });
+
+function setActiveMenu() {
+  const currentPath = window.location.pathname.split('/').pop();
+  const menuLinks = document.querySelectorAll('.header_menu-link');
+
+  menuLinks.forEach((link) => {
+    const linkPath = link.getAttribute('href');
+
+    if (
+      linkPath === currentPath ||
+      (currentPath === '' && linkPath === 'index.html')
+    ) {
+      link.classList.add('active');
+    }
+  });
+}
