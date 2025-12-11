@@ -10,6 +10,7 @@ import { Accordion } from './components/accordion';
 
 initBurger();
 setActiveMenu();
+openContactformPopup();
 
 new Accordion('#faq', '');
 
@@ -174,6 +175,29 @@ function setActiveMenu() {
       (currentPath === '' && linkPath === 'index.html')
     ) {
       link.classList.add('active');
+    }
+  });
+}
+
+function openContactformPopup() {
+  const formPopup = document.querySelector('.form-popup-wrapper');
+  const openFormBtn = document.querySelector('.open-form-btn');
+  const closeFormBtn = document.querySelector('.close-form-btn');
+
+  openFormBtn.addEventListener('click', () => {
+    formPopup.classList.add('show');
+    document.body.classList.add('lock');
+  });
+
+  closeFormBtn.addEventListener('click', () => {
+    formPopup.classList.remove('show');
+    document.body.classList.remove('lock');
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && formPopup.classList.contains('show')) {
+      formPopup.classList.remove('show');
+      document.body.classList.remove('lock');
     }
   });
 }

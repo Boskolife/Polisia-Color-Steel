@@ -4,7 +4,10 @@
   {{> header }}
   <main>
     <section class="hero">
-      <img class="hero_bg" src="./images/hero_bg.webp" alt="image not found">
+      <picture class="hero_bg">
+        <source srcset="./images/hero_bg_mob.webp" media="(max-width:560px)">
+        <img src="./images/hero_bg.webp" alt="Фон героя">
+      </picture>
       <div class="container">
         <div class="hero_content">
           <div class="hero_text-contenet">
@@ -138,7 +141,7 @@
               <li>Нанесення полімерних покриттів різних типів</li>
               <li>Підбір кольору за RAL, RR та спецвідтінками</li>
               <li>Нанесення текстур та декоративних принтів</li>
-            </ul> 
+            </ul>
             <a href="custom-steel-painting.html" class="btn btn_gray">Детальніше</a>
           </div>
         </div>
@@ -380,6 +383,7 @@
       </div>
     </section>
   </main>
+  {{> form-popup }}
   {{> footer}}
 </body>
 
